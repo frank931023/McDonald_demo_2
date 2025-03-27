@@ -1,0 +1,528 @@
+/* 基本重置與通用樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+  }
+  
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #252525;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .section-title:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #FFC72C; /* 麥當勞黃色 */
+  }
+  
+  /* 首頁容器 */
+  .home-container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+
+  
+  /* 輪播橫幅樣式 */
+  .banner-section {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  .carousel-content {
+    padding: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    border-radius: 10px;
+    margin-left: 10%;
+  }
+  
+  .carousel-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #D40000;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: white;
+  }
+  
+  /* 產品分類導航樣式 */
+  .categories-section {
+    padding: 4rem 5%;
+    background-color: white;
+  }
+  
+  .categories-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .category-item {
+    text-align: center;
+    padding: 1.5rem;
+    width: 150px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .category-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .category-item h3 {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  /* 熱門產品展示區樣式 */
+  .popular-products-section {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF0000;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .product-name, .product-price {
+    padding: 0 1rem;
+  }
+  
+  .product-name {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FF0000;
+    margin: 0.5rem 0;
+  }
+  
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #FFC72C;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #FFB700;
+  }
+  
+  /* 最新優惠區樣式 */
+  .promotion-section {
+    padding: 4rem 5%;
+    background-color: #FF0000;
+    color: white;
+    text-align: center;
+  }
+  
+  .promotion-section .section-title {
+    color: white;
+  }
+  
+  .promotion-section .section-title:after {
+    background-color: white;
+  }
+  
+  .promotion-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown-item {
+    margin: 0 1rem;
+    background-color: white;
+    color: #FF0000;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 100px;
+  }
+  
+  .countdown-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .countdown-label {
+    font-size: 1rem;
+  }
+  
+  .promotion-section .cta-button {
+    background-color: white;
+    color: #FF0000;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .promotion-section .cta-button:hover {
+    background-color: #eee;
+  }
+  
+  /* 麥當勞特色介紹樣式 */
+  .features-section {
+    padding: 4rem 5%;
+    background-color: white;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .feature-item {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-item h3 {
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  /* 社會責任區樣式 */
+  .csr-section {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+  }
+  
+  .csr-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .csr-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .csr-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .csr-content {
+    padding: 1.5rem;
+  }
+  
+  .csr-content h3 {
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #FF0000;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* 社交媒體分享區樣式 */
+  .social-share-section {
+    padding: 4rem 5%;
+    background-color: #FFC72C;
+    text-align: center;
+  }
+  
+  .social-share-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-button {
+    margin: 0 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .instagram {
+    background-color: #C13584;
+  }
+  
+  .line {
+    background-color: #00c300;
+  }
+  
+  .twitter {
+    background-color: #1DA1F2;
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 1024px) {
+    
+    .search-container {
+      flex: 0 0 30%;
+    }
+    
+    .carousel-content {
+      max-width: 400px;
+    }
+    
+    .feature-item {
+      min-width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    
+    .logo-container, .search-container, .nav-menu {
+      flex: 0 0 100%;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .search-container {
+      order: 3;
+    }
+    
+    .nav-menu ul {
+      justify-content: center;
+    }
+    
+    .banner-section {
+      height: 400px;
+    }
+    
+    .carousel-content {
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .categories-container, .features-container {
+      justify-content: center;
+    }
+    
+    .category-item {
+      width: 120px;
+    }
+    
+    .countdown-item {
+      min-width: 70px;
+      padding: 0.8rem;
+    }
+    
+    .countdown-number {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .banner-section {
+      height: 300px;
+    }
+    
+    .carousel-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .carousel-content p {
+      font-size: 1rem;
+    }
+    
+    .category-item {
+      width: 100px;
+      padding: 1rem;
+    }
+    
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    
+    .product-image {
+      height: 150px;
+    }
+    
+    .product-name {
+      font-size: 1.1rem;
+    }
+    
+    .product-price {
+      font-size: 1rem;
+    }
+    
+    .social-button {
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    
+   
+  }
