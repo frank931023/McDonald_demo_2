@@ -1,0 +1,149 @@
+.modal-overlay-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-custom {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 75%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  box-sizing: border-box;
+  max-height: 90vh; /* Prevent the modal from becoming too tall */
+  overflow: hidden; /* Prevent overflowing content from affecting layout */
+}
+
+.close-custom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-header-custom {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-body-custom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-y: auto; /* Allow the body to scroll if necessary */
+}
+
+.food-image-custom {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.details-custom {
+  flex: 1;
+  overflow-y: auto; /* Ensure that details are scrollable */
+  max-height: 60vh; /* Allow the content to scroll if it overflows */
+}
+
+.nutrient-table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.nutrient-table-custom th,
+.nutrient-table-custom td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.nutrient-table-custom th {
+  background-color: #f2f2f2;
+}
+
+.nutrient-table-custom td {
+  text-align: center;
+}
+
+.ingredients-list-custom {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ingredients-list-custom li {
+  margin-bottom: 5px;
+}
+
+/* 响应式设计 */
+
+/* Tablet and smaller devices (<= 768px) */
+@media (max-width: 768px) {
+  .modal-content-custom {
+    width: 60%; /* Slightly smaller modal on tablet */
+  }
+
+  .modal-body-custom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-image-custom {
+    max-width: 120px; /* Reduce image size on tablets */
+    margin-bottom: 15px;
+  }
+
+  .details-custom {
+    max-height: 50vh; /* Ensure the content is scrollable on tablet */
+    overflow-y: auto; /* Allow scrolling of content */
+    text-align: center;
+  }
+
+  .nutrient-table-custom {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile devices (<= 480px) */
+@media (max-width: 480px) {
+  .modal-content-custom {
+    width: 90%; /* Make modal even smaller on mobile */
+  }
+
+  .modal-body-custom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-image-custom {
+    max-width: 100px; /* Further reduce the image size on mobile */
+    margin-bottom: 15px;
+  }
+
+  .details-custom {
+    max-height: 50vh; /* Ensure content is scrollable */
+    overflow-y: auto; /* Allow content to scroll on mobile */
+    text-align: left;
+  }
+
+  .nutrient-table-custom {
+    width: 100%;
+  }
+}
