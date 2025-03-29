@@ -223,10 +223,22 @@ function Home() {
         <h2 className="section-title">分享美食時刻</h2>
         <p>與朋友分享麥當勞的美好體驗</p>
         <div className="social-buttons">
-          <button className="social-button facebook">Facebook</button>
+          {/* <button className="social-button facebook"> Facebook</button>
           <button className="social-button instagram">Instagram</button>
           <button className="social-button line">Line</button>
-          <button className="social-button twitter">Twitter</button>
+          <button className="social-button twitter">Twitter</button> */}
+          <a href="https://www.facebook.com/mcdonalds.tw" className="social-button facebook" target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/mcdonaldstw/" className="social-button instagram" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+          <a href="https://page.line.me/659wbrev" className="social-button line" target="_blank" rel="noopener noreferrer">
+            Line
+          </a>
+          <a href="https://x.com/McDonalds" className="social-button twitter" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
         </div>
       </section>
 
