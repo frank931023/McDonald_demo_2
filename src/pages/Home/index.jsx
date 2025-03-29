@@ -9,14 +9,15 @@ import product3 from '../../assets/product3.jpeg';
 import product4 from '../../assets/product4.jpeg';
 import csr1 from '../../assets/csr1.jpg'; // 請添加社會責任相關圖片
 import csr2 from '../../assets/csr2.jpg';
+import { Link } from 'react-router-dom';
 
 function Home() {
   // 輪播圖狀態管理
   const [currentSlide, setCurrentSlide] = useState(0);
   const banners = [
-    { id: 1, image: banner1, title: "超值早餐套餐", description: "限時優惠中" },
-    { id: 2, image: banner2, title: "新品上市：辣味麥脆雞", description: "嚐鮮價只要$99" },
-    { id: 3, image: banner3, title: "歡樂送到家", description: "外送滿$300折$50" }
+    { id: 1, image: banner1, title: "超值早餐套餐", description: "限時優惠中", link: "/breakfast" },
+    { id: 2, image: banner2, title: "新品上市：辣味麥脆雞", description: "嚐鮮價只要$99", link: "/lunchdinner?category=炸雞" },
+    { id: 3, image: banner3, title: "歡樂送到家", description: "外送滿$300折$50", link: "/lunchdinner" }
   ];
 
   // 倒數計時器狀態
@@ -29,20 +30,20 @@ function Home() {
 
   // 產品分類
   const categories = [
-    { id: 1, name: "漢堡", icon: "🍔" },
-    { id: 2, name: "炸雞", icon: "🍗" },
-    { id: 3, name: "點心", icon: "🍟" },
-    { id: 4, name: "飲料", icon: "🥤" },
-    { id: 5, name: "早餐", icon: "🍳" },
-    { id: 6, name: "甜點", icon: "🍦" }
+    { id: 1, name: "漢堡", icon: "🍔", path: "/lunchdinner?category=經典漢堡" },
+    { id: 2, name: "炸雞", icon: "🍗", path: "/lunchdinner?category=炸雞" },
+    { id: 3, name: "點心", icon: "🍟", path: "/lunchdinner?category=配餐" },
+    { id: 4, name: "飲料", icon: "🥤", path: "/breakfast?category=飲品" },
+    { id: 5, name: "早餐", icon: "🍳", path: "/breakfast" },
+    { id: 6, name: "甜點", icon: "🍦", path: "/lunchdinner?category=配餐&product=冰旋風（Oreo）" }
   ];
 
   // 熱門產品
   const popularProducts = [
-    { id: 1, name: "麥香雞", price: 49, image: product1, isNew: false },
-    { id: 2, name: "大麥克", price: 89, image: product2, isNew: false },
-    { id: 3, name: "焙果堡", price: 109, image: product3, isNew: true },
-    { id: 4, name: "麥克雞塊(10塊)", price: 120, image: product4, isNew: false }
+    { id: 1, name: "麥香雞", price: 49, image: product1, isNew: false ,category: "經典漢堡" },
+    { id: 2, name: "大麥克", price: 89, image: product2, isNew: false ,category: "經典漢堡"},
+    { id: 3, name: "焙果堡", price: 109, image: product3, isNew: true ,category: "焙果"},
+    { id: 4, name: "四盎司牛肉堡", price: 120, image: product4, isNew: false ,category: "經典漢堡"}
   ];
 
   // 自動輪播
@@ -77,28 +78,28 @@ function Home() {
 
   return (
     <div className="home-container">
-      
+
       {/* 輪播橫幅 */}
       <section className="banner-section">
         <div className="carousel">
           {banners.map((banner, index) => (
-            <div 
-              key={banner.id} 
+            <div
+              key={banner.id}
               className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
               style={{ backgroundImage: `url(${banner.image})` }}
             >
               <div className="carousel-content">
                 <h2>{banner.title}</h2>
                 <p>{banner.description}</p>
-                <button className="cta-button">立即查看</button>
+                  <button className="cta-button">立即查看</button>
               </div>
             </div>
           ))}
-          
+
           <div className="carousel-indicators">
             {banners.map((_, index) => (
-              <button 
-                key={index} 
+              <button
+                key={index}
                 className={`indicator ${index === currentSlide ? 'active' : ''}`}
                 onClick={() => setCurrentSlide(index)}
               ></button>
@@ -106,20 +107,22 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* 產品分類導航 */}
       <section className="categories-section">
         <h2 className="section-title">美食分類</h2>
         <div className="categories-container">
           {categories.map(category => (
             <div key={category.id} className="category-item">
-              <div className="category-icon">{category.icon}</div>
-              <h3>{category.name}</h3>
+              <Link to={category.path} className="category-link">
+                <div className="category-icon">{category.icon}</div>
+                <h3>{category.name}</h3>
+              </Link>
             </div>
           ))}
         </div>
       </section>
-      
+
       {/* 熱門產品展示區 */}
       <section className="popular-products-section">
         <h2 className="section-title">熱門餐點</h2>
@@ -130,12 +133,14 @@ function Home() {
               <img src={product.image} alt={product.name} className="product-image" />
               <h3 className="product-name">{product.name}</h3>
               <p className="product-price">${product.price}</p>
-              <button className="add-to-cart-btn">加入購物車</button>
+              <Link to={product.category === "焙果" ? `/breakfast?category=${product.category}` : `/lunchdinner?category=${product.category}`} >
+              <button className="add-to-cart-btn">查看更多</button>
+              </Link>
             </div>
           ))}
         </div>
       </section>
-      
+
       {/* 最新優惠區 */}
       <section className="promotion-section">
         <div className="promotion-content">
@@ -162,7 +167,7 @@ function Home() {
           <button className="cta-button">立即訂購</button>
         </div>
       </section>
-      
+
       {/* 麥當勞特色介紹 */}
       <section className="features-section">
         <h2 className="section-title">麥當勞特色</h2>
@@ -189,7 +194,7 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* 社會責任區 */}
       <section className="csr-section">
         <h2 className="section-title">企業社會責任</h2>
@@ -212,7 +217,7 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* 社交媒體分享區 */}
       <section className="social-share-section">
         <h2 className="section-title">分享美食時刻</h2>
@@ -224,8 +229,8 @@ function Home() {
           <button className="social-button twitter">Twitter</button>
         </div>
       </section>
-      
-     
+
+
     </div>
   );
 }

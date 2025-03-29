@@ -1,14 +1,50 @@
-import React, { useState } from "react";
-import { lunchDinner } from "../../data/lunchDinner"; // 引入資料
-import ModalBox from "../../components/ModalBox"; // 假設你已經有這個模態框組件
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { lunchDinner } from "../../data/lunchDinner";
+import ModalBox from "../../components/ModalBox";
 import "./menu.css";
 
 // 類別選項
 const categories = ["全部", "經典漢堡", "極選系列", "炸雞", "配餐", "飲品"];
 
 const LunchDinner = () => {
-  const [selectedCategory, setSelectedCategory] = useState("全部");
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const categoryParam = queryParams.get("category");
+  const productParam = queryParams.get("product");
+  
+  // 如果URL參數中有category且該category在我們的列表中，則設為默認選項
+  const initialCategory = categoryParam && categories.includes(categoryParam) 
+    ? categoryParam 
+    : "全部";
+  
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedItem, setSelectedItem] = useState(null);
+  
+  // 建立產品元素的參考
+  const productRefs = useRef({});
+
+  // 處理URL參數和滾動
+  useEffect(() => {
+    // 處理類別選擇
+    if (categoryParam && categories.includes(categoryParam)) {
+      setSelectedCategory(categoryParam);
+    }
+    
+    // 處理產品滾動
+    if (productParam) {
+      // 等待DOM更新後再滾動
+      setTimeout(() => {
+        const targetProduct = productRefs.current[productParam];
+        if (targetProduct) {
+          targetProduct.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // 可選：突出顯示找到的產品
+          targetProduct.classList.add('highlight-item');
+          setTimeout(() => targetProduct.classList.remove('highlight-item'), 3000);
+        }
+      }, 500);
+    }
+  }, [categoryParam, productParam]);
 
   // 處理過濾的邏輯
   const handleFilterChange = (category) => {
@@ -23,13 +59,13 @@ const LunchDinner = () => {
   // 顯示更多的動作
   const handleSeeMore = (item) => {
     setSelectedItem(item);
-    document.body.style.overflow = 'hidden'; // 防止滾動
+    document.body.style.overflow = 'hidden';
   };
 
   // 關閉模態框
   const handleCloseModal = () => {
     setSelectedItem(null);
-    document.body.style.overflow = 'auto'; // 恢復滾動
+    document.body.style.overflow = 'auto';
   };
 
   return (
@@ -53,11 +89,18 @@ const LunchDinner = () => {
         {/* 午晚餐清單 */}
         <ul className="lunch-dinner-list">
           {filteredItems.map((item) => (
-            <li key={item.id} className="lunch-dinner-item">
+            <li 
+              key={item.id} 
+              className="lunch-dinner-item"
+              ref={el => {
+                // 保存元素引用，使用項目名稱作為鍵
+                productRefs.current[item.name] = el;
+              }}
+            >
               {item.image ? (
                 <img src={item.image} alt={item.name} className="food-image" />
               ) : (
-                <p>[圖片缺失]</p> // 這樣可以避免沒有圖片時畫面錯誤
+                <p>[圖片缺失]</p>
               )}
               <p>{item.name}</p>
               <button onClick={() => handleSeeMore(item)}>See More</button>
@@ -73,8 +116,3 @@ const LunchDinner = () => {
 };
 
 export default LunchDinner;
-
-
-
-
-

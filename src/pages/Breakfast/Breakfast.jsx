@@ -1,14 +1,31 @@
-import React, { useState } from "react";
-import { breakfastData } from "../../data/breakfastData"; // 引入資料
-import ModalBox from "../../components/ModalBox"; // 假設你已經有這個模態框組件
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom"; // 引入useLocation鉤子
+import { breakfastData } from "../../data/breakfastData";
+import ModalBox from "../../components/ModalBox";
 import "./menu.css";
 
 // 類別選項
 const categories = ["全部", "滿福堡", "蛋堡", "焙果", "鬆餅", "麵包", "配餐", "飲品"];
 
 const Breakfast = () => {
-  const [selectedCategory, setSelectedCategory] = useState("全部");
+  const location = useLocation(); // 獲取當前URL信息
+  const queryParams = new URLSearchParams(location.search);
+  const categoryParam = queryParams.get("category");
+  
+  // 如果URL參數中有category且該category在我們的列表中，則設為默認選項
+  const initialCategory = categoryParam && categories.includes(categoryParam) 
+    ? categoryParam 
+    : "全部";
+  
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedItem, setSelectedItem] = useState(null);
+
+  // 使用useEffect處理URL參數變化
+  useEffect(() => {
+    if (categoryParam && categories.includes(categoryParam)) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [categoryParam]);
 
   // 處理過濾的邏輯
   const handleFilterChange = (category) => {
@@ -23,13 +40,13 @@ const Breakfast = () => {
   // 顯示更多的動作
   const handleSeeMore = (item) => {
     setSelectedItem(item);
-    document.body.style.overflow = 'hidden'; // 防止滾動
+    document.body.style.overflow = 'hidden';
   };
 
   // 關閉模態框
   const handleCloseModal = () => {
     setSelectedItem(null);
-    document.body.style.overflow = 'auto'; // 恢復滾動
+    document.body.style.overflow = 'auto';
   };
 
   return (
@@ -57,7 +74,7 @@ const Breakfast = () => {
               {item.image ? (
                 <img src={item.image} alt={item.name} className="food-image" />
               ) : (
-                <p>[圖片缺失]</p> // 這樣可以避免沒有圖片時畫面錯誤
+                <p>[圖片缺失]</p>
               )}
               <p>{item.name}</p>
               <button onClick={() => handleSeeMore(item)}>See More</button>
@@ -73,8 +90,3 @@ const Breakfast = () => {
 };
 
 export default Breakfast;
-
-
-
-
-
