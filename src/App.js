@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import AppPage from "./pages/App";
 import Breakfast from "./pages/Breakfast/Breakfast";
 import LunchDinner from "./pages/LunchDinner/LunchDinner";
 import mcdonaldsLogo from "./assets/mcdonalds-logo.png"; // 確保路徑正確
@@ -49,7 +48,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/app" element={<AppPage />} />
             <Route path="/breakfast" element={<Breakfast />} />
             <Route path="/lunchdinner" element={<LunchDinner />} />
           </Routes>
