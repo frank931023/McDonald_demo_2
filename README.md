@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 網頁分工
+
+This is a McDonald’s mock website developed using the React framework.
+
+### 許惟婷
+
+1. breakfast page and lunchDinner page
+2. filter function and display images and name of product
+
+### 柴映竹
+
+1. Header with searchbox and navbar
+2. footer
+3. home page with carousel, promotion section and CSR
+
+### 魏仁祥
+
+1. generate all data details
+2. modalbox
+3. router
