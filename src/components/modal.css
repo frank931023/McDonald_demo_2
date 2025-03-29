@@ -72,8 +72,8 @@
 }
 
 .food-image-custom {
-  width: 500px; /* 設定寬度為固定值 */
-  height: 500px; /* 設定高度為固定值 */
+  width: 400px; /* 設定寬度為固定值 */
+  height: 400px; /* 設定高度為固定值 */
   object-fit: cover; /* 使圖片保持比例並填滿正方形 */
   border-radius: 8px;
   flex-shrink: 0;
