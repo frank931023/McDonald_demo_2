@@ -103,7 +103,7 @@ const LunchDinner = () => {
                 <p>[圖片缺失]</p>
               )}
               <p>{item.name}</p>
-              <button onClick={() => handleSeeMore(item)}>See More</button>
+              <button className="seemore-btn" onClick={() => handleSeeMore(item)}>See More</button>
             </li>
           ))}
         </ul>
