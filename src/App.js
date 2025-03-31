@@ -46,7 +46,7 @@ function App() {
 
         {/* 頁面內容 */}
         <main>
-          <Routes>
+          <Routes basename={"/McDonald_demo_2"}>
             <Route path="/" element={<Home />} />
             {/* <Route path="/app" element={<AppPage />} /> */}
             <Route path="/breakfast" element={<Breakfast />} />
