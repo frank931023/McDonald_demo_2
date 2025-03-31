@@ -2,7 +2,7 @@
   "name": "mcdonaldinfo_v1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://frank931023.github.io/McDonald_demo_2/",
+  "homepage": "/McDonald_demo_2",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.14.0",
