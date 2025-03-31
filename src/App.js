@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 // import AppPage from "./pages/App";
 import Breakfast from "./pages/Breakfast/Breakfast";
 import LunchDinner from "./pages/LunchDinner/LunchDinner";
+import MapComponent from "./pages/Map/Map";
 import mcdonaldsLogo from "./assets/mcdonalds-logo.png"; // 確保路徑正確
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -41,6 +42,9 @@ function App() {
               <li>
                 <Link to="/lunchdinner">午晚餐</Link>
               </li>
+              <li>
+                <Link to="/map">門市查詢</Link>
+              </li>
             </ul>
           </nav>
         </header>
@@ -52,6 +56,7 @@ function App() {
             {/* <Route path="/app" element={<AppPage />} /> */}
             <Route path="/breakfast" element={<Breakfast />} />
             <Route path="/lunchdinner" element={<LunchDinner />} />
+            <Route path="/map" element={<MapComponent />} />
           </Routes>
         </main>
 

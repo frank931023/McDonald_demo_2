@@ -89,3 +89,4 @@ This is a McDonald’s mock website developed using the React framework.
 1. generate all data details
 2. modalbox
 3. router
+4. store locator page

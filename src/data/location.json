@@ -1,0 +1,302 @@
+[
+  {
+    "type": "node",
+    "id": 1,
+    "lat": 25.0174,
+    "lon": 121.5556,
+    "tags": {
+      "name": "中壢南園店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2,
+    "lat": 24.9835,
+    "lon": 121.5353,
+    "tags": {
+      "name": "平鎮民族店",
+      "McDelivery": "yes",
+      "open_24/7": "no",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3,
+    "lat": 24.987,
+    "lon": 121.5135,
+    "tags": {
+      "name": "中壢民族店",
+      "McDelivery": "yes",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4,
+    "lat": 25.0365,
+    "lon": 121.5126,
+    "tags": {
+      "name": "桃園大園店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5,
+    "lat": 25.0177,
+    "lon": 121.5122,
+    "tags": {
+      "name": "中壢建國店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "no",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6,
+    "lat": 25.0333,
+    "lon": 121.5779,
+    "tags": {
+      "name": "平鎮建國店",
+      "McDelivery": "yes",
+      "open_24/7": "no",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7,
+    "lat": 24.9983,
+    "lon": 121.5763,
+    "tags": {
+      "name": "桃園中平店",
+      "McDelivery": "no",
+      "open_24/7": "no",
+      "drive_thru": "yes",
+      "click_ans_serve": "no",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8,
+    "lat": 25.0224,
+    "lon": 121.5921,
+    "tags": {
+      "name": "中壢南園店",
+      "McDelivery": "yes",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9,
+    "lat": 25.0338,
+    "lon": 121.5889,
+    "tags": {
+      "name": "中壢環中東店",
+      "McDelivery": "yes",
+      "open_24/7": "no",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10,
+    "lat": 25.0556,
+    "lon": 121.635,
+    "tags": {
+      "name": "桃園建國店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "yes",
+      "click_ans_serve": "no",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11,
+    "lat": 25.095,
+    "lon": 121.5527,
+    "tags": {
+      "name": "中壢復興店",
+      "McDelivery": "yes",
+      "open_24/7": "no",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12,
+    "lat": 25.0824,
+    "lon": 121.5527,
+    "tags": {
+      "name": "中壢民族店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13,
+    "lat": 24.9366,
+    "lon": 121.6928,
+    "tags": {
+      "name": "中壢建國店",
+      "McDelivery": "yes",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 14,
+    "lat": 25.096,
+    "lon": 121.6261,
+    "tags": {
+      "name": "桃園大園店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 15,
+    "lat": 24.9068,
+    "lon": 121.5133,
+    "tags": {
+      "name": "中壢環中東店",
+      "McDelivery": "no",
+      "open_24/7": "yes",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 16,
+    "lat": 25.0333,
+    "lon": 121.5779,
+    "tags": {
+      "name": "中壢南園店",
+      "McDelivery": "yes",
+      "open_24/7": "no",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 17,
+    "lat": 25.0556,
+    "lon": 121.635,
+    "tags": {
+      "name": "桃園中平店",
+      "McDelivery": "yes",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 18,
+    "lat": 25.079,
+    "lon": 121.6193,
+    "tags": {
+      "name": "桃園建國店",
+      "McDelivery": "yes",
+      "open_24/7": "yes",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "yes"
+    }
+  },
+  {
+    "type": "node",
+    "id": 19,
+    "lat": 24.9754,
+    "lon": 121.5472,
+    "tags": {
+      "name": "平鎮建國店",
+      "McDelivery": "no",
+      "open_24/7": "no",
+      "drive_thru": "no",
+      "click_ans_serve": "yes",
+      "rewards": "no",
+      "eletric_vehicle_charging": "no"
+    }
+  },
+  {
+    "type": "node",
+    "id": 20,
+    "lat": 24.9266,
+    "lon": 121.6517,
+    "tags": {
+      "name": "中壢南園店",
+      "McDelivery": "yes",
+      "open_24/7": "yes",
+      "drive_thru": "yes",
+      "click_ans_serve": "yes",
+      "rewards": "yes",
+      "eletric_vehicle_charging": "no"
+    }
+  }
+]
