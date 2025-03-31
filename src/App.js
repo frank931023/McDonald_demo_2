@@ -12,7 +12,7 @@ import SearchBar from "./components/SearchBar"; // 導入我們的新搜索欄�
 
 function App() {
   return (
-    <Router>
+    <Router basename="/McDonald_demo_2">
       <ScrollToTop /> {/* 放置在 Router 內 */}
       <div className="App">
         {/* 全域共享的 Header */}
@@ -46,9 +46,8 @@ function App() {
 
         {/* 頁面內容 */}
         <main>
-          <Routes basename={"/McDonald_demo_2"}>
+          <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/app" element={<AppPage />} /> */}
             <Route path="/breakfast" element={<Breakfast />} />
             <Route path="/lunchdinner" element={<LunchDinner />} />
             <Route path="/map" element={<MapComponent />} />
