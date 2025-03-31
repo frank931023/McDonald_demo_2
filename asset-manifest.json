@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/frank931023/McDonald_demo_2/static/css/main.33b714b4.css",
-    "main.js": "/frank931023/McDonald_demo_2/static/js/main.9589ffd8.js",
-    "static/js/453.2a57f805.chunk.js": "/frank931023/McDonald_demo_2/static/js/453.2a57f805.chunk.js",
-    "static/media/banner1.png": "/frank931023/McDonald_demo_2/static/media/banner1.5e5c8028f53779dbd468.png",
-    "static/media/csr1.jpg": "/frank931023/McDonald_demo_2/static/media/csr1.c188eac40ca921571936.jpg",
-    "static/media/csr2.jpg": "/frank931023/McDonald_demo_2/static/media/csr2.daccc68a48cc5d056b48.jpg",
-    "static/media/banner3.jpeg": "/frank931023/McDonald_demo_2/static/media/banner3.2f2a7bce14685ad0ce4b.jpeg",
-    "static/media/banner2.jpeg": "/frank931023/McDonald_demo_2/static/media/banner2.60420de8ebdf04ee07fb.jpeg",
-    "static/media/product2.jpeg": "/frank931023/McDonald_demo_2/static/media/product2.cb1e7ea99bd5492f9d1b.jpeg",
-    "static/media/product1.jpeg": "/frank931023/McDonald_demo_2/static/media/product1.46b0eb998f29df5776fe.jpeg",
-    "static/media/product3.jpeg": "/frank931023/McDonald_demo_2/static/media/product3.309d189992a2144a82df.jpeg",
-    "static/media/product4.jpeg": "/frank931023/McDonald_demo_2/static/media/product4.8322e559c73509a940e3.jpeg",
-    "static/media/mcdonalds-logo.png": "/frank931023/McDonald_demo_2/static/media/mcdonalds-logo.95b0f4179b63f8f66835.png",
-    "index.html": "/frank931023/McDonald_demo_2/index.html",
-    "main.33b714b4.css.map": "/frank931023/McDonald_demo_2/static/css/main.33b714b4.css.map",
-    "main.9589ffd8.js.map": "/frank931023/McDonald_demo_2/static/js/main.9589ffd8.js.map",
-    "453.2a57f805.chunk.js.map": "/frank931023/McDonald_demo_2/static/js/453.2a57f805.chunk.js.map"
+    "main.css": "/McDonald_demo_2/static/css/main.33b714b4.css",
+    "main.js": "/McDonald_demo_2/static/js/main.0fec3aff.js",
+    "static/js/453.2a57f805.chunk.js": "/McDonald_demo_2/static/js/453.2a57f805.chunk.js",
+    "static/media/banner1.png": "/McDonald_demo_2/static/media/banner1.5e5c8028f53779dbd468.png",
+    "static/media/csr1.jpg": "/McDonald_demo_2/static/media/csr1.c188eac40ca921571936.jpg",
+    "static/media/csr2.jpg": "/McDonald_demo_2/static/media/csr2.daccc68a48cc5d056b48.jpg",
+    "static/media/banner3.jpeg": "/McDonald_demo_2/static/media/banner3.2f2a7bce14685ad0ce4b.jpeg",
+    "static/media/banner2.jpeg": "/McDonald_demo_2/static/media/banner2.60420de8ebdf04ee07fb.jpeg",
+    "static/media/product2.jpeg": "/McDonald_demo_2/static/media/product2.cb1e7ea99bd5492f9d1b.jpeg",
+    "static/media/product1.jpeg": "/McDonald_demo_2/static/media/product1.46b0eb998f29df5776fe.jpeg",
+    "static/media/product3.jpeg": "/McDonald_demo_2/static/media/product3.309d189992a2144a82df.jpeg",
+    "static/media/product4.jpeg": "/McDonald_demo_2/static/media/product4.8322e559c73509a940e3.jpeg",
+    "static/media/mcdonalds-logo.png": "/McDonald_demo_2/static/media/mcdonalds-logo.95b0f4179b63f8f66835.png",
+    "index.html": "/McDonald_demo_2/index.html",
+    "main.33b714b4.css.map": "/McDonald_demo_2/static/css/main.33b714b4.css.map",
+    "main.0fec3aff.js.map": "/McDonald_demo_2/static/js/main.0fec3aff.js.map",
+    "453.2a57f805.chunk.js.map": "/McDonald_demo_2/static/js/453.2a57f805.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33b714b4.css",
-    "static/js/main.9589ffd8.js"
+    "static/js/main.0fec3aff.js"
   ]
 }
