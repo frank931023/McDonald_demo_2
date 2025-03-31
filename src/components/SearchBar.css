@@ -1,0 +1,149 @@
+.search-container {
+    display: flex;
+    flex: 0 0 40%;
+    position: relative;
+  }
+  
+  .search-input-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+  }
+  
+  .search-button {
+    padding: 0.6rem 1.2rem;
+    background-color: #FF0000; 
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+  }
+  
+  .search-button:hover {
+    background-color: #d40000;
+  }
+  
+  /* 搜索下拉菜單樣式 */
+  .search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .search-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .search-dropdown li {
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .search-dropdown li:last-child {
+    border-bottom: none;
+  }
+  
+  .search-dropdown li:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .suggestion-name {
+    font-weight: bold;
+  }
+  
+  .suggestion-category {
+    color: #777;
+    font-size: 0.9em;
+  }
+  
+  /* 搜索歷史樣式 */
+  .search-history {
+    background-color: #f9f9f9;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .history-header h4 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .clear-history {
+    background: none;
+    border: none;
+    color: #FF0000;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding: 2px 8px;
+  }
+  
+  .clear-history:hover {
+    text-decoration: underline;
+  }
+  
+  .history-icon {
+    margin-right: 10px;
+    color: #777;
+  }
+  
+  /* 查無資料樣式 */
+  .no-results {
+    padding: 15px;
+  }
+  
+  .no-results-message {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+  }
+  
+  .no-results-message p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .no-results-tip {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .search-container {
+      flex: 0 0 100%;
+    }
+  }

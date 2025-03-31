@@ -8,6 +8,7 @@ import LunchDinner from "./pages/LunchDinner/LunchDinner";
 import MapComponent from "./pages/Map/Map";
 import mcdonaldsLogo from "./assets/mcdonalds-logo.png"; // 確保路徑正確
 import ScrollToTop from "./components/ScrollToTop";
+import SearchBar from "./components/SearchBar"; // 導入我們的新搜索欄組件
 
 function App() {
   return (
@@ -22,14 +23,8 @@ function App() {
             </Link>
           </div>
 
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="搜尋餐點..."
-              className="search-input"
-            />
-            <button className="search-button">搜尋</button>
-          </div>
+          {/* 使用我們的新搜索欄組件替換原來的搜索欄 */}
+          <SearchBar />
 
           <nav className="nav-menu">
             <ul>
