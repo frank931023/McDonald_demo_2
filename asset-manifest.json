@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/McDonald_demo_2/static/css/main.33b714b4.css",
-    "main.js": "/McDonald_demo_2/static/js/main.0fec3aff.js",
+    "main.js": "/McDonald_demo_2/static/js/main.e1f80926.js",
     "static/js/453.2a57f805.chunk.js": "/McDonald_demo_2/static/js/453.2a57f805.chunk.js",
     "static/media/banner1.png": "/McDonald_demo_2/static/media/banner1.5e5c8028f53779dbd468.png",
     "static/media/csr1.jpg": "/McDonald_demo_2/static/media/csr1.c188eac40ca921571936.jpg",
@@ -15,11 +15,11 @@
     "static/media/mcdonalds-logo.png": "/McDonald_demo_2/static/media/mcdonalds-logo.95b0f4179b63f8f66835.png",
     "index.html": "/McDonald_demo_2/index.html",
     "main.33b714b4.css.map": "/McDonald_demo_2/static/css/main.33b714b4.css.map",
-    "main.0fec3aff.js.map": "/McDonald_demo_2/static/js/main.0fec3aff.js.map",
+    "main.e1f80926.js.map": "/McDonald_demo_2/static/js/main.e1f80926.js.map",
     "453.2a57f805.chunk.js.map": "/McDonald_demo_2/static/js/453.2a57f805.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33b714b4.css",
-    "static/js/main.0fec3aff.js"
+    "static/js/main.e1f80926.js"
   ]
 }
